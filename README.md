@@ -14,18 +14,11 @@ This package integrates the powerful AIMNet2 neural network potential into your 
 ### 1. Installation
 
 While package is in alpha stage and repository is private, please install into your conda envoronment manually with
-```
-# install requirements
-conda install -y pytorch pytorch-cuda=12.1 -c pytorch -c nvidia 
-conda install -y -c pyg pytorch-cluster
-conda install -y -c conda-forge openbabel ase
-## pysis requirements
-conda install -y -c conda-forge autograd dask distributed h5py fabric jinja2 joblib matplotlib numpy natsort psutil pyyaml rmsd scipy sympy scikit-learn
-# now should not do any pip installs
-pip install git+https://github.com/eljost/pysisyphus.git
-# finally, this repo
-git clone git@github.com:zubatyuk/aimnet2calc.git
-cd aimnet2calc
+```bash
+python3 -m venv aimnet_env
+pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+pip install torch-cluster -f https://data.pyg.org/whl/torch-2.4.0+cu121.html
+pip install ase spglib requests numba==0.60.0
 python setup.py install
 ```
 
