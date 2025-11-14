@@ -16,6 +16,7 @@ This package integrates the powerful AIMNet2 neural network potential into your 
 While package is in alpha stage and repository is private, please install into your conda envoronment manually with
 ```bash
 python3 -m venv aimnet_env
+source aimnet_env/bin/activate
 pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
 pip install torch-cluster -f https://data.pyg.org/whl/torch-2.4.0+cu121.html
 pip install ase spglib requests numba==0.60.0
